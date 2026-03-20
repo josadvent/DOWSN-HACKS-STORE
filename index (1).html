@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DOWSN STORE</title>
+<title>DOWSN HACKS STORE</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins&display=swap" rel="stylesheet">
 
@@ -15,6 +15,7 @@ body {
   color: white;
 }
 
+/* HEADER */
 .header {
   text-align: center;
   padding: 30px;
@@ -23,8 +24,14 @@ body {
   font-family: 'Orbitron';
   font-size: 40px;
   text-shadow: 0 0 25px #ff00ff;
+  animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff00ff; }
+  to { text-shadow: 0 0 30px #ff00ff, 0 0 60px #9900ff; }
 }
 
+/* BUTTON */
 .main-btn {
   display: block;
   margin: 20px auto;
@@ -35,8 +42,15 @@ body {
   color: #ff00ff;
   text-align: center;
   text-decoration: none;
+  transition: 0.3s;
+}
+.main-btn:hover {
+  background: #ff00ff;
+  color: black;
+  box-shadow: 0 0 20px #ff00ff;
 }
 
+/* FILTER */
 .filter {
   text-align: center;
 }
@@ -48,11 +62,16 @@ body {
   background: #1a1a1f;
   color: white;
   cursor: pointer;
+  transition: 0.3s;
+}
+.filter button:hover {
+  background: #2a2a30;
 }
 .filter .active {
   background: linear-gradient(45deg, #ff00ff, #9900ff);
 }
 
+/* CARD */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -65,7 +84,20 @@ body {
   padding: 15px;
   border-radius: 20px;
   background: #111;
-  box-shadow: 0 0 20px #ff00ff50;
+  box-shadow: 0 0 20px #ff00ff30;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 25px #ff00ff80;
 }
 
 .card img {
@@ -87,6 +119,12 @@ body {
   border: 1px solid white;
   padding: 8px 15px;
   border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.info:hover {
+  background: white;
+  color: black;
 }
 
 .order {
@@ -95,6 +133,10 @@ body {
   border-radius: 10px;
   color: white;
   text-decoration: none;
+  transition: 0.3s;
+}
+.order:hover {
+  box-shadow: 0 0 15px #ff00ff;
 }
 </style>
 </head>
@@ -102,7 +144,7 @@ body {
 <body>
 
 <div class="header">
-  <div class="title">DOWSN STORE</div>
+  <div class="title">DOWSN HACKS STORE</div>
 </div>
 
 <a href="https://whatsapp.com/channel/0029VbCWSPqEgGfEQvFui73V" target="_blank" class="main-btn">
@@ -117,8 +159,9 @@ body {
 
 <div class="container">
 
+<!-- FF -->
 <div class="card ff">
-  <img src="https://media.discordapp.net/attachments/1413434672993800216/1484398547280592946/HG.jpg?ex=69be1560&is=69bcc3e0&hm=32acb6cb056d77348e4b3d2a62ddf9f72fed7ec5f81728c387e3a88657fc5817&=&format=webp&width=611&height=614">
+  <img src="https://media.discordapp.net/attachments/1413434672993800216/1484398547280592946/HG.jpg">
   <h3>HG CHEAT (NO ROOT) [FREE FIRE]</h3>
   <p>7 Hari - <span class="price">70K</span></p>
   <p>10 Hari - <span class="price">95K</span></p>
@@ -130,8 +173,8 @@ body {
   </div>
 </div>
 
-  <div class="card ff">
-  <img src="https://media.discordapp.net/attachments/1413434672993800216/1484398546944790658/Screenshot_2026_0320_104822.jpg?ex=69be1560&is=69bcc3e0&hm=29337768ca5abd9670b0468b473460ae8c0b7ac4899631836f76b0a4eb5b4db5&=&format=webp&width=1104&height=614">
+<div class="card ff">
+  <img src="https://media.discordapp.net/attachments/1413434672993800216/1484398546944790658/Screenshot_2026_0320_104822.jpg">
   <h3>DRIPT CLIENT (NO ROOT) [FREE FIRE]</h3>
   <p>1 Hari - <span class="price">40K</span></p>
   <p>3 Hari - <span class="price">50K</span></p>
@@ -144,9 +187,9 @@ body {
     <a href="https://wa.link/okvaxi" target="_blank" class="order">ORDER</a>
   </div>
 </div>
-  
-    <div class="card ff">
-  <img src="https://media.discordapp.net/attachments/1413434672993800216/1484398546944790658/Screenshot_2026_0320_104822.jpg?ex=69be1560&is=69bcc3e0&hm=29337768ca5abd9670b0468b473460ae8c0b7ac4899631836f76b0a4eb5b4db5&=&format=webp&width=1104&height=614">
+
+<div class="card ff">
+  <img src="https://media.discordapp.net/attachments/1413434672993800216/1484398546944790658/Screenshot_2026_0320_104822.jpg">
   <h3>DRIPT CLIENT (ROOT) [FREE FIRE]</h3>
   <p>1 Hari - <span class="price">35K</span></p>
   <p>7 Hari - <span class="price">95K</span></p> 
@@ -158,27 +201,26 @@ body {
   </div>
 </div>
 
+<!-- ML -->
 <div class="card ml">
-  <img src="">
+  <img src="https://via.placeholder.com/300x200?text=ATTIC">
   <h3>ATTIC EXCLUSIVE [MOBILE LEGENDS]</h3>
   <p>3 Hari - <span class="price">30K</span></p>
   <p>7 Hari - <span class="price">55K</span></p>
   <p>30 Hari - <span class="price">105K</span></p>
   <p>60 Hari - <span class="price">185K</span></p>
   <p>90 Hari - <span class="price">255K</span></p>
-  
+
   <div class="actions">
     <div class="info">INFO</div>
     <a href="https://wa.link/okvaxi" target="_blank" class="order">ORDER</a>
   </div>
 </div>
 
-  <div class="card ml">
-  <img src="">
+<div class="card ml">
+  <img src="https://via.placeholder.com/300x200?text=NECRO">
   <h3>NECRO CHEAT [MOBILE LEGENDS]</h3>
   <p>1 Hari - <span class="price">20K</span></p>
-  <p>2 Hari - <span class="price">30K</span></p>
-  <p>3 Hari - <span class="price">40K</span></p>
   <p>7 Hari - <span class="price">75K</span></p>
   <p>30 Hari - <span class="price">165K</span></p>
 
@@ -191,6 +233,7 @@ body {
 </div>
 
 <script>
+// FILTER (dibikin smooth)
 function filterGame(game, el) {
   let cards = document.querySelectorAll(".card");
   let buttons = document.querySelectorAll(".filter button");
@@ -199,13 +242,26 @@ function filterGame(game, el) {
   el.classList.add("active");
 
   cards.forEach(card => {
-    if (game === "all") {
-      card.style.display = "block";
-    } else {
-      card.style.display = card.classList.contains(game) ? "block" : "none";
-    }
+    card.classList.remove("show");
+
+    setTimeout(() => {
+      if (game === "all") {
+        card.style.display = "block";
+      } else {
+        card.style.display = card.classList.contains(game) ? "block" : "none";
+      }
+      setTimeout(() => card.classList.add("show"), 50);
+    }, 150);
   });
 }
+
+// ANIMASI MASUK AWAL
+window.onload = () => {
+  let cards = document.querySelectorAll(".card");
+  cards.forEach((card, i) => {
+    setTimeout(() => card.classList.add("show"), i * 100);
+  });
+};
 </script>
 
 </body>
